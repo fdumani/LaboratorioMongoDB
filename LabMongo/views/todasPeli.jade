@@ -1,0 +1,7 @@
+extends layout
+block content
+    h3.
+        Todas las peliculas
+    ul
+        each pelicula, i in todasPeli
+            li#pelicula_list_item Nombre: #{pelicula.nombre}; Genero: #{pelicula.genero}; Director: #{pelicula.director}; Franquicia: #{pelicula.franquicia}; Pais: #{pelicula.pais}; Año: #{pelicula.year}; Duracion: #{pelicula.duracion}; Productor: #{pelicula.productor}; Actores: #{pelicula.actores}

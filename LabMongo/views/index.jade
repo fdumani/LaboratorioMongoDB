@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+  p Manipulación de películas y productores
+
+  form#form_add_student(name="todasPeli", method="get",
+    action="/todasPeli")
+    button#submit_student(type="submit") Todas las películas
+  br
+  br
+
+  form#form_add_student(name="buscarPeli", method="get",
+    action="/buscarPeli")
+    button#submit_student(type="submit") Buscar pelicula por nombre
+  br
+  br
+  
+  form#form_add_student(name="buscarFran", method="get",
+    action="/buscarFran")
+    button#submit_student(type="submit") Buscar pelicula por franquicia
+  br
+  br
+
+  form#form_add_student(name="buscarDia", method="get",
+    action="/buscarDia")
+    button#submit_student(type="submit") Buscar pelicula por fecha

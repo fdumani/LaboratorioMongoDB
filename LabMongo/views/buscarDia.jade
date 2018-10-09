@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+    h3= title
+    
+    form#form_add_student(name="mostrarDia", method="post",
+    action="/mostrarDia")
+        span Primer año
+        span &nbsp;
+        input#input(type="text", placeholder="año 1", name="value1")
+        br
+        br
+        span Segundo año
+        span &nbsp;
+        input#input(type="text", placeholder="año 2", name="value2")
+        br
+        br
+        button#submit_student(type="submit") submit

@@ -1,0 +1,13 @@
+extends layout
+block content
+    h3.
+        Pelicula buscada:
+    form#form_add_student(name="buscarPeli", method="get",
+    action="/buscarPeli")
+        ul
+            each pelicula, i in peli
+                li#pelicula_list_item Nombre: #{pelicula.nombre}; Genero: #{pelicula.genero}; Director: #{pelicula.director}; Franquicia: #{pelicula.franquicia}; Pais: #{pelicula.pais}; Año: #{pelicula.year}; Duracion: #{pelicula.duracion}; Productor: #{pelicula.productor}; Actores: #{pelicula.actores}
+            br
+            br
+        
+        button#submit_student(type="submit") Buscar otra pelicula
