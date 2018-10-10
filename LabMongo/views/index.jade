@@ -16,6 +16,12 @@ block content
   br
   br
 
+  form#form_add_student(name="deletePeli", method="get",
+    action="/deletePeli")
+    button#submit_student(type="submit") Remover película
+  br
+  br
+
   form#form_add_student(name="todasProd", method="get",
     action="/todasProd")
     button#submit_student(type="submit") Todas las productoras
@@ -25,6 +31,12 @@ block content
   form#form_add_student(name="newProd", method="get",
     action="/newProd")
     button#submit_student(type="submit") Agregar productora
+  br
+  br
+
+  form#form_add_student(name="deleteProd", method="get",
+    action="/deleteProd")
+    button#submit_student(type="submit") Remover productora
   br
   br
 

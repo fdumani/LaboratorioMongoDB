@@ -342,4 +342,66 @@ router.post('/addProd', function(req, res){
   });
 });
 
+router.get('/deletePeli', function(req, res){
+  res.render('deletePeli', {title: 'Remover película'});
+});
+
+router.post('/remPeli', function(req, res){
+  var MongoClient = mongodb.MongoClient;
+  
+
+  var url = 'mongodb://localhost:27017/LabMongo';
+  MongoClient.connect(url, function(err, db){
+    if (err){
+      console.log('Unable to connect to server', err);
+    } else {
+      console.log('Connectes to server');
+
+      var collection = db.collection('peliculas');
+
+      var peli1 = {nombre: req.body.nombre}
+
+      collection.remove(peli1, function(err, result){
+        if(err){
+          console.log(err);
+        } else{
+          res.redirect("/");
+        }
+        db.close();
+      });
+    }
+  });
+});
+
+router.get('/deleteProd', function(req, res){
+  res.render('deleteProd', {title: 'Remover productora'});
+});
+
+router.post('/remProd', function(req, res){
+  var MongoClient = mongodb.MongoClient;
+  
+
+  var url = 'mongodb://localhost:27017/LabMongo';
+  MongoClient.connect(url, function(err, db){
+    if (err){
+      console.log('Unable to connect to server', err);
+    } else {
+      console.log('Connectes to server');
+
+      var collection = db.collection('productoras');
+
+      var peli1 = {nombre: req.body.nombre}
+
+      collection.remove(peli1, function(err, result){
+        if(err){
+          console.log(err);
+        } else{
+          res.redirect("/");
+        }
+        db.close();
+      });
+    }
+  });
+});
+
 module.exports = router;
