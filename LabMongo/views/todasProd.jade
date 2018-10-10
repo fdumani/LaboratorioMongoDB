@@ -1,0 +1,14 @@
+extends layout
+block content
+
+    form#Home(name="", method="get",action="/")
+        button#submit_home(type="submit") Home
+    br
+    br
+
+    h1.
+        Todas las productoras
+    ul
+        each productora, i in todasProd
+            li#pelicula_list_item Nombre: #{productora.nombre}; Año de fundación: #{productora.year}; Sitio web: #{productora.web}
+            br

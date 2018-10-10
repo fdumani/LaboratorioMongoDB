@@ -2,7 +2,12 @@ extends layout
 
 block content
 
-    h3= title
+    form#Home(name="", method="get",action="/")
+        button#submit_home(type="submit") Home
+    br
+    br
+
+    h1= title
     
     form#form_add_student(name="mostrarFran", method="post",
     action="/mostrarFran")

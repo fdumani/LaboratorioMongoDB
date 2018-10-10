@@ -1,0 +1,26 @@
+extends layout
+block content
+
+    form#Home(name="", method="get",action="/")
+        button#submit_home(type="submit") Home
+    br
+    br
+
+    h1.
+        Datos de peliculas
+    h3.
+        Numero de peliculas: 
+    h4.
+        #{contPeli}
+    br
+    br
+    h3.
+        Pelicula con menor duracion:
+    h4.
+        Nombre: #{menorPeli.nombre}; Duracion: #{menorPeli.duracion}
+    br
+    br
+    h3.
+        Pelicula con maxima duracion:
+    h4.
+        Nombre: #{maxPeli.nombre}; Duracion: #{maxPeli.duracion}

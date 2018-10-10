@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+    form#Home(name="", method="get",action="/")
+        button#submit_home(type="submit") Home
+    br
+    br
+
+    h1= title
+    
+    form#form_add_student(name="mostrarProd", method="post",
+    action="/mostrarProd")
+        span Nombre
+        span &nbsp;
+        input#input(type="text", placeholder="nombre", name="nombrep")
+        br
+        br
+        button#submit_student(type="submit") submit
